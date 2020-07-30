@@ -1,10 +1,5 @@
-execute pathogen#infect()
-filetype plugin indent on
 syntax enable
-let g:solarized_termcolors=256
-set t_ut=               " Disable background color erase
-set background=dark
-colorscheme solarized
+colorscheme pablo
 
 "" General
 set number	        " Show line numbers
@@ -13,6 +8,7 @@ set showbreak=+++	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	        " Highlight matching brace
 set visualbell	        " Use visual bell (no beeping)
+set t_vb=               " Clear visual bell length (no flashing)
  
 set hlsearch	        " Highlight all search results
 set smartcase	        " Enable smart-case search
