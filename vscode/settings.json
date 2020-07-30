@@ -1,0 +1,57 @@
+{
+    // VSCode
+    "workbench.startupEditor": "newUntitledFile",
+    "extensions.ignoreRecommendations": false,
+    "editor.renderWhitespace": "none",
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 2,
+    "editor.rulers": [ 120 ],
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "liveshare.connectionMode": "relay",
+    "window.zoomLevel": 1,
+    "window.titleBarStyle": "custom",
+    "python.pythonPath": "C:\\Users\\Carl\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    // File-type settings
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "python.linting.pylintArgs": [
+        "--load-plugins", "pylint_django"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.pydocstyleEnabled": false,
+    // This is ignored when .pylintrc is used
+    "python.linting.pylintUseMinimalCheckers": true,
+    // Extension settings
+    "local-history.saveDelay": 300,
+    "eslint.packageManager": "yarn",
+    // Language ids that should be validated with ESLint
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+        "vue"
+    ],
+    // Default shells to display in integrated terminal
+    "shellLauncher.shells.windows": [
+        {
+            "shell": "C:\\WINDOWS\\System32\\bash.exe",
+            "label": "Bash"
+        },
+        {
+            "shell": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "label": "PowerShell"
+        },
+        {
+            "shell": "C:\\WINDOWS\\System32\\cmd.exe",
+            "label": "Command Prompt"
+        }
+    ],
+    // Disable alt-key focus on the menu bar
+    "window.customMenuBarAltFocus": false,
+    "gitlens.hovers.currentLine.over": "line"
+}
