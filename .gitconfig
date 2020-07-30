@@ -1,0 +1,29 @@
+[user]
+    email = carl.masri@gmail.com
+    name = Carl Masri
+[push]
+    default = current
+[core]
+    editor = vim
+[alias]
+    la = !git config -l | grep alias | cut -c 7-
+    co = checkout
+    br = branch
+    bd = branch -d
+    ci = commit
+    can = commit --amend --no-edit
+    pf = push --force-with-lease
+    st = status
+    di = diff
+    ds = diff --staged
+    ls = log --pretty=oneline --abbrev-commit --decorate -n 15 
+    ss = stash save
+    sl = stash list
+    sp = stash pop
+    rpo = remote prune origin
+    gbpurge = !git branch --merged | grep -vE '\\*|master|devel' | xargs -n 1 git branch -d
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
