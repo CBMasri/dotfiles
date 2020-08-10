@@ -100,6 +100,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
+alias tarball='tar -czvf'
+alias untar='tar -xzvf'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -116,31 +118,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# send display of graphical apps to Windows
-export DISPLAY=:0
-
-# virtualenvwrapper
-# export WORKON_HOME=~/.virtualenvs
-# export VIRTUALENVWRAPPER_PYTHON=$(which python3)
-# source /usr/local/bin/virtualenvwrapper.sh
-
-# docker
-export DOCKER_HOST=tcp://0.0.0.0:2375
-echo "Mounting /mnt/c/ to /c ..."
-sudo mount --bind /mnt/c /c   # required
-cd /c/Users/Carl/code/        # don't fuck yourself (again)
-
-# thefuck
-# eval $(thefuck --alias)
-
-# yarn global path
-export PATH="$(yarn global bin):$PATH"
-
-# pip3 user install path
+# Add local binaries to PATH (pip3)
 export PATH="$HOME/.local/bin:$PATH"
 
-# fzy finder
-alias search='ls -l $(find -type f | fzy)'
+# Auto cd into code repo
+if [ -d "$HOME/code" ]; then
+  cd $HOME/code
+else
+  cd $HOME
+fi
 
 # Set current tab title
 function set-title() {
