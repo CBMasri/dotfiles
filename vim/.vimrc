@@ -27,3 +27,9 @@ set ruler	        " Show row and column ruler information
  
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
+
+"" Disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
