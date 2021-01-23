@@ -5,6 +5,9 @@
     default = current
 [core]
     editor = vim
+    ignorecase = false
+	longpaths = true
+	autocrlf = false
 [alias]
     la = !git config -l | grep alias | cut -c 7-
     co = checkout
@@ -20,10 +23,18 @@
     ss = stash save
     sl = stash list
     sp = stash pop
+    sd = stash drop
     rpo = remote prune origin
-    gbpurge = !git branch --merged | grep -vE '\\*|master|devel' | xargs -n 1 git branch -d
+    td = !sh -c 'git tag --delete $1 && git push origin :refs/tags/$1' -
+    adog = log --all --decorate --oneline --graph
+    wip = !git add . && git commit -m "wip" --no-verify
+    gbpurge = !git branch --merged | grep -vE '\\*|master|main' | xargs -n 1 git branch -d
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[pull]
+    ff = only
+[init]
+    defaultBranch = main
