@@ -2,7 +2,19 @@
 
 ## macOS
 
-### shell
+### theme
+
+Get the theme:
+
+```bash
+git clone git@github.com:lysyi3m/macos-terminal-themes.git
+cd macos-terminal-themes/themes
+open Solarized\ Dark\ Higher\ Contrast.terminal
+```
+
+Set the theme as default in Terminal settings. Set the window size to 120x25.
+
+### font
 
 Install FiraCode NerdFont from [here](https://www.nerdfonts.com/font-downloads).
 
@@ -10,6 +22,10 @@ Install FiraCode NerdFont from [here](https://www.nerdfonts.com/font-downloads).
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code-nerd-font
 ```
+
+Set the font as default in Terminal settings, size 14.
+
+### shell
 
 Install [Fish](https://fishshell.com/) and [starship.rs](https://starship.rs/):
 
@@ -26,8 +42,6 @@ fish_add_path /opt/homebrew/bin
 
 To make fish the default shell, run `fish` followed by `command -s fish` to get the path.
 Next, open Terminal settings and change "Shells open with" to `/path/to/fish`.
-
-While we're in here, change the font to FiraCode NerdFont, the font size to 14, and the default window size to 120 x 25.
 
 To make starship the default prompt, use the following:
 
