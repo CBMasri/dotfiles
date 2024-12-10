@@ -16,12 +16,13 @@ Set the theme as default in Terminal settings. Set the window size to 120x25.
 
 ### font
 
-Install FiraCode NerdFont from [here](https://www.nerdfonts.com/font-downloads).
+Install Droid Sans NerdFont (or any other [Nerd Font](https://www.nerdfonts.com/#home) you like).
 
 ```
-brew tap homebrew/cask-fonts
-brew install --cask font-fira-code-nerd-font
+brew install --cask font-droid-sans-mono-nerd-font
 ```
+
+The full list of fonts available on homebrew is [here](https://formulae.brew.sh/cask-font/).
 
 Set the font as default in Terminal settings, size 14.
 
